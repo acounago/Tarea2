@@ -8,7 +8,7 @@
 
     docker images
 
-**Crea un contenedor con el nombre 'asir_httpd',mapea el puerto 80 del contenedor con el puerto 8000 de tu máquina y utiliza bind mount para que el directorio del apache2 'htdocs' este montado un directorio que tu elijas. **
+**Crea un contenedor con el nombre 'asir_httpd',mapea el puerto 80 del contenedor con el puerto 8000 de tu máquina y utiliza bind mount para que el directorio del apache2 'htdocs' este montado un directorio que tu elijas.**
 
     docker run -dit --name asir_httpd -p 8000:80 -v /home/asir2/SRI/Tarea2/cajones:/usr/local/apache2/htdocs httpd:2.4
 
@@ -36,5 +36,15 @@
 
     docker run -dit --name asir_web2 -p 9080:80 -v /home/asir2/SRI/Tarea2/cajones:/usr/local/apache2/htdocs httpd:2.4
 
-    
+**Comprueba que los dos servidores 'sirven' la misma página:**
+
+*Para comprobar que los servidores sirven a la misma página escribimos en el navegador:*
+
+    http://localhost:9080 
+    http://localhost:8000
+
+**Tienen que salir la misma página web**
+
+*Con la configuración utilizada, apuntan a la misma página web*
+
 
