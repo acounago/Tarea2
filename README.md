@@ -18,3 +18,23 @@
 
     localhost:8000/
 
+**Crea un contenedor 'asir_web1' que use este mismo directorio para 'htdocs' y el puerto 8000**
+
+*Comando para crear el contenedor y asignación de puerto*:
+
+    docker run -dit --name asir_web1 -p 8000:80 -v /home/asir2/SRI/Tarea2/cajones:/usr/local/apache2/htdocs httpd:2.4
+
+**Utiliza Code para hacer un hola mundo en html**
+
+*Creamos un html con el texto "Hola mundo" y accedemos a el poniendo en el navegador:
+
+    localhost:8000/
+
+**Crea otro contenedor 'asir_web2' con el mismo directorio y a otro puerto, por ejemplo 9080.**
+
+*Comando para crear el contenedor y asignación de puerto*:
+
+    docker run -dit --name asir_web2 -p 9080:80 -v /home/asir2/SRI/Tarea2/cajones:/usr/local/apache2/htdocs httpd:2.4
+
+    
+
